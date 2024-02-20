@@ -8,12 +8,13 @@
 
     let tempdata = [];
     let chartReady = false
+    let sortBy = 'years'; // Default sort
     onMount(async () => {
         const res = await fetch('combined_data.csv');
         const csv = await res.text();
         tempdata = csvParse(csv, autoType);
         console.log(tempdata);
-        chartReady = true;
+        console.log(tempdata[0])
     
     var margin = {top: 10, right: 30, bottom: 30, left: 60},
             width = 460 - margin.left - margin.right,
@@ -30,7 +31,7 @@
 
         // Add X axis
         var x = d3.scaleLinear()
-            .domain([0, 10])
+            .domain([10, 50])
             .range([ 0, width ]);
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
@@ -54,5 +55,19 @@
             .attr("r", 1.5)
             .style("fill", "#69b3a2");
     });
-    
+    function updateDots(svg) {
+    const sortFunction = sortBy === 'years' 
+                         ? (a, b) => d3.ascending(a.years, b.years)
+                         : (a, b) => d3.ascending(a.age, b.age);
+
+    svg.selectAll('circle') // Re-sort existing dots
+       .sort(sortFunction) 
+       .transition()
+       .duration(500)
+       .attr("cx", function(d) { return x(d.years); })
+       .attr("cy", function(d) { return y(d.age); }); 
+  }
 </script>
+<div id="my_dataviz"></div> 
+<button on:click={() => { sortBy = 'years'; updateDots(); }}>Sort by X</button>
+<button on:click={() => { sortBy = 'age'; updateDots(); }}>Sort by Y</button>
