@@ -4,6 +4,8 @@
     import * as d3 from 'd3';
     
     let tempdata = [];
+    import { onMount } from 'svelte';
+
     onMount(async () => {
         const res = await fetch('combined_data.csv');
         const csv = await res.text();
