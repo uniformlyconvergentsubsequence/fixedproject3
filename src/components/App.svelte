@@ -17,7 +17,7 @@
     let mouse_position = {
         x: 0, y: 0
     };
-    let prev_d = null;
+    var customOrder = ['Europe', 'Africa', 'South America', 'Central America and the Caribbean', 'North America', 'Middle East', 'Central Asia', "South Asia", 'East and Southeast Asia', 'Australia and Oceania'];
 
     var margin = {top: 10, right: 30, bottom: 50, left: 60},
             width = 460 - margin.left - margin.right,
@@ -76,60 +76,102 @@
             .attr("y", -margin.left + 30)
             .text("Leader Age");
 
-        // Define color scale
-        var color = d3.scaleOrdinal(d3.schemeCategory10);
+        // Make a custom color scale
+        var customColors = [
+            '#FF0000',
+            '#ff7f00',
+            "#FFD400",
+            '#0095FF',
+            '#0040FF',
+            '#23628F',
+            '#737373',
+            '#6B238F',
+            '#8F2323',
+            "#4F8F23"
+        ];
+        var color = d3.scaleOrdinal().range(customColors);
 
         // Add dots
-        svg.append('g')
+        var dots = svg.append('g')
             .selectAll("dot")
             .data(tempdata)
             .enter()
             .append("circle")
-            .attr("cx", function (d) { return x(d.median_age); } )
-            .attr("cy", function (d) { return y(d.leader_age); } )
+            .attr("cx", function (d) { return x(d.median_age); })
+            .attr("cy", function (d) { return y(d.leader_age); })
             .attr("r", 5)
-            .style("fill", function(d) { return color(d.region); }) 
-            .on("mouseover", (event) => {  
+            .style("fill", function (d) { return color(d.region); })
+            .on("mouseover", function (event) {
                 const d = event.target.__data__;
                 mouse_position = {
                     x: event.pageX,
                     y: event.pageY
-                }
-                console.log(d); 
+                };
+                console.log(d);
                 d3.select(this)
-                    .attr("r", 50) 
-                    .style("fill", "red") 
-                    .style("stroke-width", "2px") 
-                    .style("stroke", "black"); 
+                    .attr("r", 7)
+                    .style("fill", "red")
+                    .style("stroke-width", "2px")
+                    .style("stroke", "black");
 
                 // Show tooltip
                 d3.select("#tooltip")
                     .style("display", "block")
                     .html(`Country: ${d.Country}<br>Median Age: ${d.median_age}<br>Leader Age: ${d.leader_age}<br>Region: ${d.region}`) // Display the country name and region in the tooltip
-                    .style("left", (mouse_position.x+10) + "px")
-                    .style("top", (mouse_position.y+10) + "px")
-                
+                    .style("left", (mouse_position.x + 10) + "px")
+                    .style("top", (mouse_position.y + 10) + "px");
             })
-            .on("mouseout", function(d) {
+            .on("mouseout", function () {
                 d3.select(this)
                     .attr("r", 5)
-                    .style("fill", function(d) { return color(d.region); }) 
-                    .style("stroke-width", "1px") 
-                    .style("stroke", "none"); 
+                    .style("fill", function (d) { return color(d.region); })
+                    .style("stroke-width", "1px")
+                    .style("stroke", "none");
 
                 // Hide tooltip
                 d3.select("#tooltip")
                     .style("display", "none");
             });
 
+        // Function to search for dots by country name dynamically
+        document.getElementById("searchBox").addEventListener("input", function () {
+            // Whenever the searchBox is typed in, update the variable searchText
+            var searchText = this.value.trim().toLowerCase();
+            console.log("Search Text: ", searchText);
+            
+            // Get the matching countries
+            var matchingCountries = tempdata.filter(function (d) {
+                return searchText && d.Country.toLowerCase().startsWith(searchText);
+            });
+
+            // Log the matching countries to the console
+            console.log("Matching Countries:", matchingCountries);
+
+            // Iterate over each dot and change opacity based on if the string matches name
+            dots.each(function (d) {
+                // "match" the country name to the search box content
+                var isMatching = searchText && d.Country.toLowerCase().startsWith(searchText);
+
+                // Use an if block to set opacity
+                if (searchText) {
+                    d3.select(this)
+                        .style("opacity", isMatching ? 1 : 0.07);
+                } else {
+                    d3.select(this).style("opacity", 1);
+                }
+            });
+        });
+
+
         
+
         // Add legend
         var legend = d3.select("#legend")
             .append("svg")
             .attr("width", 500)
             .attr("height", 300) 
             .selectAll("g")
-            .data(color.domain().map(d => d.trim())) 
+            .data(customOrder, d => d.trim()) 
             .enter()
             .append("g")
             .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; })
@@ -189,18 +231,17 @@
             
         }
 
-
-
     });
+    
+
 </script>
 
 <main>
     <body>
         <h1>Are country leaders older than their population?</h1>
         <h5>Data from 2018</h5>
-        <p>Click on legend to filter by region, and hover the data points to see details!</p>
         <div class='row'>
-            <div class='column'>
+            <div class='left'>
                 <div id="my_dataviz"></div>
                 <div id="tooltip" style="
                     display: none; 
@@ -210,10 +251,16 @@
                     border: 1px 
                     solid gray;"/>
             </div>
-            <div class='column'>
+            <div class='right'>
+                <label for="searchBox">Search Dot by Name: </label>
+                <input type="text" id="searchBox" placeholder="Enter name">
+                <br>
+                <br>
                 <div id="legend"></div>
             </div>
         </div>
+        <p>Click on the legend to filter by region and hover the data points to see details!</p>
+        
     </body>
 </main>
 
@@ -232,5 +279,13 @@
     .column {
         flex: 50%;
     }
+
+    .left {
+        flex: 10%;
+    }
+    .right {
+        flex: 90%;
+    }
+    
 
 </style>

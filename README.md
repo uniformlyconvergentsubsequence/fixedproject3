@@ -1,34 +1,34 @@
-# create-svelte
+<h1>Design Overview</h1>
+For our dataset, we wanted to see if there was any correlation between a country's median population age and the age of its leader. Since the two variables are both quantitative, we decided that a scatterplot would be the best way to show a correlation (if any).
 
-## Generate static site using svelte SSG
+<br>
+We have around 173 data points, so labelling all of them individually at once would be extremely confusing, so we decided to add interaction by creating a mouseover tooltip that shows the details of each country. 
 
-To assist you in creating a static webpage for GitHub Pages using Svelte, we have developed a template for you: [ShaokangJiang/svelte-template (github.com)](https://github.com/ShaokangJiang/svelte-template).
+<br>
+We thought the graph was initially quite boring and undescriptive, so we decided to create a color scheme based around the country regions. Initially, we thought of separating regions by continent as it is most straightforward, but upon inspection we realize there exist non-negligible differences among the sub-regions: for instance, the 
 
-Please follow the link provided, and initiate the creation of a new repository.
 
-![image-20240210175403813](./assets/image-20240210175403813.png)
+Since we did this, we decided that we could make the visualization more interesting and 
+interactive by letting the viewer filter data by region. 
 
-After GitHub completes the cloning process, navigate to the settings page. On the left panel, under the "Pages" tab, locate the "Source" section and select "GitHub Actions" as the source. 
+<br>
+We had some other ideas that we scrapped along the way. The first one was that of 
+adding interactive trendlines. However when we took a look at the data, we realized 
+that there really wasn't a major trend, median_age and leader_age appeared to have 
+little correlation. 
 
-Clone this repository and proceed with your work. Upon completion, commit and push your changes. The corresponding GitHub Actions will then execute, building a static website hosted at `https://your-username.github.io/your-repo-name` for you.
+<h1>Development process:</h1>
 
-![image-20240210175104365](./assets/image-20240210175104365.png)
+David - I created the scatterplot visualization 
+in App.svelte and setup the interaction functionality. I'd say I spent around 10 hours 
+on this, but the majority of the time was trying to figure out how to use d3 and integrate 
+it with the github. After fixing technical errors and looking through d3 and svelte 
+documentation and videos, creating the visualization and interaction itself took 
+considerably shorter.
 
-### Migrate from your project
+Dhilan - I used Python requests and BeautifulSoup4 to webscrape the country leader data from various websites and compiled it into a csv file. Then, I added upon David's code by reformatting the HTML aspect of it, as well as adding QoL (Quality of Life) features such as: 
+    Moving the legends to the right hand side instead of underneath
+    Greying out the filtered out regions, and un-greying them when the filter is removed.
+    Move the tooltip to dynamically follow the cursor position, instead of as a static text box 
 
-If you have started on the project and want to switch to using this template, you can copy your `src` folder, go to the local clone of your version of this template, then paste it. When it says the file exists, simply click replace, and you can continue working on your version of this template.
-
-## Setup
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building static site
-
-Just push to github. 
+The web scraping took about 4 hours, while the QoL part took about 2 hours.
