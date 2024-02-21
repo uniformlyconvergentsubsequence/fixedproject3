@@ -1,0 +1,179 @@
+,Country,age,Gender,slug,years,date_of_information,ranking,region,Population
+0,Afghanistan,75.0,Male,afghanistan,19.9,2023,203,South Asia,42.2
+1,Albania,57.0,Male,albania,35.8,2023,90,Europe,2.8
+2,Algeria,79.0,Male,algeria,28.9,2023,143,Africa,45.6
+3,Andorra,75.0,Male,andorra,48.1,2023,5,Europe,0.0
+4,Angola,70.0,Male,angola,16.2,2023,225,Africa,36.7
+5,Antigua and Barbuda,80.0,Male,antigua-and-barbuda,33.6,2023,107,Central America and the Caribbean,0.1
+6,Argentina,65.0,Male,argentina,33.0,2023,110,South America,45.8
+7,Armenia,65.0,Male,armenia,38.3,2023,69,Middle East,2.8
+8,Australia,71.0,Male,australia,37.9,2023,76,Australia and Oceania,26.4
+9,Austria,52.0,Male,austria,44.8,2023,20,Europe,9.0
+10,Azerbaijan,63.0,Male,azerbaijan,33.8,2023,105,Middle East,10.4
+11,Bahrain,74.0,Male,bahrain,33.3,2023,108,Middle East,1.5
+12,Bangladesh,75.0,Male,bangladesh,29.2,2023,142,South Asia,173.0
+13,Barbados,75.0,Female,barbados,41.0,2023,50,Central America and the Caribbean,0.3
+14,Belarus,70.0,Male,belarus,41.7,2023,47,Europe,9.5
+15,Belgium,64.0,Male,belgium,41.9,2023,46,Europe,11.7
+16,Belize,73.0,Male,belize,26.4,2023,160,Central America and the Caribbean,0.4
+17,Benin,66.0,Male,benin,17.1,2023,221,Africa,13.7
+18,Bhutan,44.0,Male,bhutan,30.2,2023,132,South Asia,0.8
+19,Bolivia,61.0,Male,bolivia,26.2,2023,161,South America,12.4
+20,Bosnia and Herzegovina,65.0,Male,bosnia-and-herzegovina,44.4,2023,28,Europe,3.2
+21,Botswana,63.0,Male,botswana,26.8,2023,159,Africa,2.7
+22,Brazil,69.0,Male,brazil,34.7,2023,99,South America,216.4
+23,Brunei,78.0,Male,brunei,32.0,2023,114,East and Southeast Asia,0.5
+24,Bulgaria,61.0,Male,bulgaria,44.7,2023,25,Europe,6.7
+25,Burkina Faso,43.0,Male,burkina-faso,18.5,2023,216,Africa,23.3
+26,Burundi,56.0,Male,burundi,18.2,2023,219,Africa,13.2
+27,Cambodia,71.0,Male,cambodia,27.6,2023,152,East and Southeast Asia,16.9
+28,Cameroon,91.0,Male,cameroon,18.8,2023,214,Africa,28.6
+29,Canada,53.0,Male,canada,42.4,2023,39,North America,38.8
+30,Central African Republic,67.0,Male,central-african-republic,20.2,2023,200,Africa,5.7
+31,Chad,40.0,Male,chad,16.5,2023,223,Africa,18.3
+32,Chile,38.0,Male,chile,36.6,2023,84,South America,19.6
+33,China,71.0,Male,china,39.8,2023,62,East and Southeast Asia,1425.7
+34,Colombia,64.0,Male,colombia,32.4,2023,112,South America,52.1
+35,Comoros,65.0,Male,comoros,22.3,2023,181,Africa,0.9
+36,Costa Rica,63.0,Male,costa-rica,35.0,2023,96,Central America and the Caribbean,5.2
+37,Croatia,58.0,Male,croatia,44.8,2023,22,Europe,4.0
+38,Cuba,64.0,Male,cuba,42.3,2023,42,Central America and the Caribbean,11.2
+39,Curacao,53.0,Male,curacao,37.5,2023,79,Central America and the Caribbean,0.2
+40,Cyprus,78.0,Male,cyprus,39.1,2023,65,Europe,1.3
+41,Djibouti,77.0,Male,djibouti,26.0,2023,163,Africa,1.1
+42,Dominica,76.0,Male,dominica,36.5,2023,85,Central America and the Caribbean,0.0
+43,Dominican Republic,57.0,Male,dominican-republic,28.9,2023,144,Central America and the Caribbean,11.3
+44,Egypt,70.0,Male,egypt,24.1,2023,175,Africa,112.7
+45,El Salvador,43.0,Male,el-salvador,29.2,2023,141,Central America and the Caribbean,6.4
+46,Equatorial Guinea,82.0,Male,equatorial-guinea,21.9,2023,184,Africa,1.7
+47,Eritrea,78.0,Male,eritrea,21.0,2023,190,Africa,3.7
+48,Estonia,51.0,Female,estonia,44.7,2023,24,Europe,1.3
+49,Ethiopia,48.0,Male,ethiopia,20.2,2023,201,Africa,126.5
+50,Faroe Islands,60.0,Male,faroe-islands,36.8,2023,82,Europe,0.0
+51,Fiji,70.0,Male,fiji,31.2,2023,122,Australia and Oceania,0.9
+52,Finland,76.0,Female,finland,43.2,2023,36,Europe,5.5
+53,France,47.0,Male,france,42.4,2023,41,Europe,64.8
+54,French Polynesia,75.0,Male,french-polynesia,34.8,2023,98,Australia and Oceania,0.3
+55,Gabon,89.0,Male,gabon,21.8,2023,185,Africa,2.4
+56,Georgia,72.0,Female,georgia,38.0,2023,75,Middle East,3.7
+57,Germany,70.0,Female,germany,46.7,2023,8,Europe,83.3
+58,Ghana,80.0,Male,ghana,21.3,2023,189,Africa,34.1
+59,Greece,50.0,Male,greece,46.2,2023,10,Europe,10.3
+60,Grenada,79.0,Male,grenada,35.0,2023,94,Central America and the Caribbean,0.1
+61,Guatemala,68.0,Male,guatemala,24.4,2023,172,Central America and the Caribbean,18.1
+62,Guinea,44.0,Male,guinea,19.3,2023,206,Africa,14.2
+63,Guinea-Bissau,52.0,Male,guinea-bissau,18.3,2023,217,Africa,2.2
+64,Guyana,44.0,Male,guyana,27.9,2023,149,South America,0.8
+65,Haiti,75.0,Male,haiti,24.7,2023,170,Central America and the Caribbean,11.7
+66,Honduras,65.0,Female,honduras,25.3,2023,166,Central America and the Caribbean,10.6
+67,Hungary,47.0,Female,hungary,44.5,2023,27,Europe,10.2
+68,Iceland,56.0,Male,iceland,37.8,2023,77,Europe,0.4
+69,India,74.0,Male,india,29.5,2023,139,South Asia,1428.6
+70,Indonesia,63.0,Male,indonesia,31.2,2023,123,East and Southeast Asia,277.5
+71,Iran,85.0,Male,iran,33.3,2023,109,Middle East,89.2
+72,Iraq,64.0,Male,iraq,22.1,2023,182,Middle East,45.5
+73,Ireland,83.0,Male,ireland,39.8,2023,60,Europe,5.1
+74,Israel,52.0,Male,israel,30.1,2023,137,Middle East,9.2
+75,Italy,47.0,Female,italy,48.1,2023,4,Europe,58.9
+76,Jamaica,79.0,Male,jamaica,30.5,2023,129,Central America and the Caribbean,2.8
+77,Japan,67.0,Male,japan,49.5,2023,3,East and Southeast Asia,123.3
+78,Jordan,62.0,Male,jordan,24.6,2023,171,Middle East,11.3
+79,Kazakhstan,71.0,Male,kazakhstan,31.7,2023,117,Central Asia,19.6
+80,Kenya,58.0,Male,kenya,20.9,2023,194,Africa,55.1
+81,Kosovo,42.0,Female,kosovo,31.7,2023,116,Europe,0.0
+82,Kuwait,87.0,Male,kuwait,30.1,2023,138,Middle East,4.3
+83,Kyrgyzstan,56.0,Male,kyrgyzstan,28.1,2023,148,Central Asia,6.7
+84,Laos,79.0,Male,laos,25.0,2023,168,East and Southeast Asia,0.0
+85,Latvia,69.0,Male,latvia,45.2,2023,16,Europe,1.8
+86,Lebanon,76.0,Male,lebanon,35.8,2023,89,Middle East,5.4
+87,Lesotho,61.0,Male,lesotho,23.7,2023,177,Africa,2.3
+88,Liberia,58.0,Male,liberia,19.7,2023,205,Africa,5.4
+89,Libya,82.0,Male,libya,26.1,2023,162,Africa,6.9
+90,Liechtenstein,79.0,Male,liechtenstein,44.1,2023,29,Europe,0.0
+91,Lithuania,68.0,Male,lithuania,45.0,2023,19,Europe,2.7
+92,Luxembourg,61.0,Male,luxembourg,39.8,2023,61,Europe,0.7
+93,Madagascar,50.0,Male,madagascar,21.0,2023,193,Africa,30.3
+94,Malawi,69.0,Male,malawi,20.0,2023,202,Africa,20.9
+95,Malaysia,99.0,Male,malaysia,31.4,2023,119,East and Southeast Asia,34.3
+96,Maldives,60.0,Male,maldives,31.3,2023,120,South Asia,0.5
+97,Mali,41.0,Male,mali,16.3,2023,224,Africa,23.3
+98,Malta,66.0,Female,malta,43.2,2023,35,Europe,0.5
+99,Marshall Islands,73.0,Male,marshall-islands,25.1,2023,167,Australia and Oceania,0.0
+100,Mauritania,68.0,Male,mauritania,21.9,2023,183,Africa,4.9
+101,Mexico,71.0,Male,mexico,30.6,2023,128,North America,128.5
+102,Moldova,52.0,Female,moldova,39.4,2023,63,Europe,3.4
+103,Monaco,66.0,Male,monaco,56.2,2023,1,Europe,0.0
+104,Mongolia,56.0,Male,mongolia,31.2,2023,124,East and Southeast Asia,3.4
+105,Montenegro,62.0,Male,montenegro,40.7,2023,54,Europe,0.6
+106,Morocco,63.0,Male,morocco,30.2,2023,133,Africa,37.8
+107,Mozambique,65.0,Male,mozambique,17.2,2023,220,Africa,33.9
+108,Namibia,83.0,Male,namibia,22.5,2023,180,Africa,2.6
+109,Nauru,52.0,Male,nauru,27.5,2023,154,Australia and Oceania,0.0
+110,Nepal,80.0,Male,nepal,27.1,2023,156,South Asia,30.9
+111,Nepal,80.0,Male,nepal,27.1,2023,156,South Asia,30.9
+112,Netherlands,57.0,Male,netherlands,42.2,2023,43,Europe,17.6
+113,New Zealand,44.0,Female,new-zealand,37.7,2023,78,Australia and Oceania,5.2
+114,Nicaragua,79.0,Male,nicaragua,28.5,2023,146,Central America and the Caribbean,7.0
+115,Niger,72.0,Male,niger,15.1,2023,227,Africa,27.2
+116,Nigeria,82.0,Male,nigeria,19.2,2023,207,Africa,223.8
+117,Norway,63.0,Male,norway,40.6,2023,57,Europe,5.5
+118,Oman,69.0,Male,oman,27.1,2023,155,Middle East,4.6
+119,Pakistan,75.0,Male,pakistan,22.7,2023,178,South Asia,240.5
+120,Palau,56.0,Male,palau,35.0,2023,95,Australia and Oceania,0.0
+121,Panama,71.0,Male,panama,31.2,2023,125,Central America and the Caribbean,4.5
+122,Papua New Guinea,60.0,Male,papua-new-guinea,21.6,2023,187,East and Southeast Asia,10.3
+123,Paraguay,53.0,Male,paraguay,31.3,2023,121,South America,6.9
+124,Peru,55.0,Male,peru,30.1,2023,136,South America,34.4
+125,Philippines,67.0,Male,philippines,25.4,2023,165,East and Southeast Asia,117.3
+126,Poland,52.0,Male,poland,42.4,2023,40,Europe,41.0
+127,Portugal,76.0,Male,portugal,46.0,2023,11,Europe,10.2
+128,Qatar,44.0,Male,qatar,34.2,2023,100,Middle East,2.7
+129,Romania,65.0,Male,romania,45.1,2023,17,Europe,19.9
+130,Russia,72.0,Male,russia,41.5,2023,48,Central Asia,144.4
+131,Rwanda,67.0,Male,rwanda,20.5,2023,195,Africa,14.1
+132,Saint Kitts and Nevis,48.0,Male,saint-kitts-and-nevis,38.1,2023,72,Central America and the Caribbean,0.0
+133,Saint Lucia,70.0,Female,saint-lucia,39.0,2023,66,Central America and the Caribbean,0.2
+134,Saint Vincent and the Grenadines,78.0,Male,saint-vincent-and-the-grenadines,37.0,2023,80,Central America and the Caribbean,0.1
+135,Samoa,67.0,Male,samoa,26.9,2023,158,Australia and Oceania,0.2
+136,San Marino,52.0,Male,san-marino,45.9,2023,13,Europe,0.0
+137,Saudi Arabia,100.0,Male,saudi-arabia,32.0,2023,115,Middle East,36.9
+138,Senegal,63.0,Male,senegal,19.0,2023,212,Africa,17.8
+139,Serbia,54.0,Male,serbia,43.7,2023,34,Europe,7.1
+140,Seychelles,63.0,Male,seychelles,38.2,2023,70,Africa,0.1
+141,Sierra Leone,60.0,Male,sierra-leone,19.2,2023,208,Africa,8.8
+142,Singapore,90.0,Male,singapore,38.9,2023,67,East and Southeast Asia,6.0
+143,Sint Maarten,56.0,Female,sint-maarten,41.1,2023,49,Central America and the Caribbean,0.0
+144,Slovakia,51.0,Female,slovakia,42.5,2023,38,Europe,5.8
+145,Slovenia,72.0,Male,slovenia,45.9,2023,12,Europe,2.1
+146,Solomon Islands,69.0,Male,solomon-islands,24.8,2023,169,Australia and Oceania,0.7
+147,Somalia,69.0,Male,somalia,19.0,2023,211,Africa,18.1
+148,South Africa,72.0,Male,south-africa,30.1,2023,135,Africa,60.4
+149,Spain,52.0,Male,spain,46.3,2023,9,Europe,47.5
+150,Sri Lanka,75.0,Male,sri-lanka,33.9,2023,104,South Asia,21.9
+151,Sudan,73.0,Male,sudan,19.1,2023,210,Africa,48.1
+152,Suriname,79.0,Male,suriname,31.6,2023,118,South America,0.6
+153,Sweden,57.0,Female,sweden,41.0,2023,51,Europe,10.6
+154,Switzerland,63.0,Male,switzerland,44.0,2023,31,Europe,8.8
+155,Syria,59.0,Male,syria,23.9,2023,176,Middle East,23.2
+156,Tajikistan,72.0,Male,tajikistan,22.7,2023,179,Central Asia,10.1
+157,Tanzania,64.0,Female,tanzania,18.9,2023,213,Africa,67.4
+158,Thailand,86.0,Male,thailand,41.0,2023,53,East and Southeast Asia,71.8
+159,Togo,58.0,Male,togo,20.5,2023,196,Africa,9.1
+160,Tonga,80.0,Male,tonga,25.4,2023,164,Australia and Oceania,0.1
+161,Trinidad and Tobago,66.0,Female,trinidad-and-tobago,38.0,2023,74,Central America and the Caribbean,1.5
+162,Tunisia,66.0,Male,tunisia,34.0,2023,101,Africa,12.5
+163,Turkmenistan,43.0,Male,turkmenistan,30.7,2023,127,Central Asia,6.5
+164,Tuvalu,68.0,Male,tuvalu,27.5,2023,153,Australia and Oceania,0.0
+165,Uganda,80.0,Male,uganda,16.1,2023,226,Africa,48.6
+166,Ukraine,46.0,Male,ukraine,45.3,2023,15,Europe,36.7
+167,United Arab Emirates,63.0,Male,united-arab-emirates,35.7,2023,92,Middle East,9.5
+168,United Kingdom,44.0,Male,united-kingdom,40.6,2023,58,Europe,67.7
+169,United States,82.0,Male,united-states,38.5,2020,68,North America,340.0
+170,Uruguay,51.0,Male,uruguay,36.2,2023,87,South America,3.4
+171,Uzbekistan,86.0,Male,uzbekistan,28.7,2023,145,Central Asia,35.2
+172,Vanuatu,70.0,Male,vanuatu,24.2,2023,174,Australia and Oceania,0.3
+173,Venezuela,62.0,Male,venezuela,30.8,2023,126,South America,28.8
+174,Vietnam,80.0,Male,vietnam,32.7,2023,111,East and Southeast Asia,98.9
+175,Yemen,79.0,Male,yemen,21.6,2023,188,Middle East,34.4
+176,Zambia,62.0,Male,zambia,18.2,2023,218,Africa,20.6
+177,Zimbabwe,82.0,Male,zimbabwe,21.0,2023,191,Africa,16.7
