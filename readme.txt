@@ -14,3 +14,9 @@ adding interactive trendlines. However when we took a look at the data, we reali
 that there really wasn't a major trend, median_age and leader_age appeared to have 
 little correlation. 
 
+In terms of splitting up the work, David - I created the scatterplot visualization 
+in App.svelte and setup the interaction functionality. I'd say I spent around 10 hours 
+on this, but the majority of the time was trying to figure out how to use d3 and integrate 
+it with the github. After fixing technical errors and looking through d3 and svelte 
+documentation and videos, creating the visualization and interaction itself took 
+considerably shorter.
