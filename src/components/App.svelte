@@ -13,8 +13,6 @@
         const res = await fetch('combined_data.csv');
         const csv = await res.text();
         tempdata = csvParse(csv, autoType);
-        console.log(tempdata);
-        console.log(tempdata[0])
     let mouse_position = {
         x: 0, y: 0
     };
@@ -133,8 +131,8 @@
                     x: event.pageX,
                     y: event.pageY
                 };
-                console.log(d);
                 d3.select(this)
+                .transition().duration(transDuration/10)
                     .attr("r", 7)
                     .style("fill", "red")
                     .style("stroke-width", "2px")
@@ -149,6 +147,7 @@
             })
             .on("mouseout", function () {
                 d3.select(this)
+                    .transition().duration(transDuration/10)
                     .attr("r", 5)
                     .style("fill", function (d) { return color(d.region); })
                     .style("stroke-width", "1px")
@@ -163,7 +162,6 @@
         document.getElementById("searchBox").addEventListener("input", function () {
             // Whenever the searchBox is typed in, update the variable searchText
             var searchText = this.value.trim().toLowerCase();
-            console.log("Search Text: ", searchText);
 
             // Iterate over each dot and change opacity based on if the string matches name
             dots.each(function (d) {
@@ -176,7 +174,8 @@
                         .style("opacity", isMatching ? 1 : 0.07)
                         .raise();
                 } else {
-                    d3.select(this).style("opacity", 1);
+                    d3.select(this)
+                    .style("opacity", 1);
                 }
             });
         });
@@ -193,11 +192,9 @@
             .data(customOrder, d => d.trim()) 
             .enter()
             .append("g")
+            .style('cursor', 'pointer')
             .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; })
             .on("click", function(event, d) {
-                console.log("Clicked region:", d); 
-                console.log("selectedRegion (before):", selectedRegion);
-
                 // If user clicks the same region twice, re-toggle all
                 if (selectedRegion === d) {
                         selectedRegion = null;
@@ -244,16 +241,13 @@
                .duration(transDuration)
                .attr("cx", function(d) { return x(d.median_age); })
                .attr("cy", function(d) { return y(d.leader_age); })
-               .style("opacity", function(d) { 
-                    return selectedRegion === null || d.region === selectedRegion ? 1 : 0; 
-                }).end()
+
                .style("display", function(d) { 
-                
-                if (selectedRegion === null) {
-                    return "block"; // Show all if no region selected
-                } else {
-                    return d.region === selectedRegion ? "block" : "none"; 
-                }
+                    if (selectedRegion === null) {
+                        return "block"; // Show all if no region selected
+                    } else {
+                        return d.region === selectedRegion ? "block" : "none"; 
+                    }
             }); 
 
             
