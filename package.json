@@ -1,9 +1,12 @@
 {
 	"name": "todomvc",
 	"version": "0.0.1",
+	"homepage": "https://kingof2s.github.io/fixedproject3/",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"prepare": "npm run build",
+		"deploy": "gh-pages -d build",
 		"build": "vite build",
 		"preview": "vite preview"
 	},
