@@ -5,10 +5,9 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"prepare": "npm run build",
-		"deploy": "gh-pages -d build",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"deploy": "npx gh-pages -d dist"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
