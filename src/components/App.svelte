@@ -1,7 +1,7 @@
 
 <h1>Does the median age of a country correlate to the age of its leader?</h1>
-<p>X axis is median_age, Y axis is leader age</p>
-<p>Click on legend to filter and mouseover a dot to see the country</p>
+<p>X axis is median_age, Y axis is leader age, both in years</p>
+<p>Click on legend once to filter, twice to reset, and mouseover a dot to see the country</p>
 <div id="my_dataviz"></div>
 <div id="legend"></div>
 
