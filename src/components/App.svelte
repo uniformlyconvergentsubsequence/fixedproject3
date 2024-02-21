@@ -8,6 +8,7 @@
     let chartReady = false
     let sortBy = 'median_age';
     let selectedRegion = null; 
+    let transDuration = 250;
     onMount(async () => {
         const res = await fetch('combined_data.csv');
         const csv = await res.text();
@@ -17,6 +18,10 @@
     let mouse_position = {
         x: 0, y: 0
     };
+
+    let yStart = 30, xStart = 10;
+    let yEnd = 100, xEnd = 60;
+
     var customOrder = ['Europe', 'Africa', 'South America', 'Central America and the Caribbean', 'North America', 'Middle East', 'Central Asia', "South Asia", 'East and Southeast Asia', 'Australia and Oceania'];
 
     var margin = {top: 10, right: 30, bottom: 50, left: 60},
@@ -32,9 +37,10 @@
             .attr("transform",
                 "translate(" + margin.left + "," + margin.top + ")");
 
+
         // Add X axis
         var x = d3.scaleLinear()
-            .domain([10, 50])
+            .domain([xStart, xEnd])
             .range([ 0, width ]);
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
@@ -56,7 +62,7 @@
 
         // Add Y axis
         var y = d3.scaleLinear()
-            .domain([0, 100])
+            .domain([yStart, yEnd])
             .range([ height, 0]);
         svg.append("g")
             .call(d3.axisLeft(y))
@@ -75,6 +81,26 @@
             .attr("x", -height / 2)
             .attr("y", -margin.left + 30)
             .text("Leader Age");
+
+        // Cover the area below the x axis
+        svg.append("defs").append("clipPath")
+            .attr("id", "clip")
+            .append("rect")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Add a 45-degree line
+        svg.append("line")
+            .attr("class", "diagonal-line")
+            .attr("x1", x(Math.min(xStart, yStart)))
+            .attr("y1", y(Math.min(xStart, yStart))) 
+            .attr("x2", x(Math.min(xEnd, yEnd)))
+            .attr("y2", y(Math.min(xEnd, yEnd))) 
+            .style("stroke", "red")
+            .style("stroke-dasharray", "5,5")
+            // "Clip" the portion that extends below x-axis
+            .attr("clip-path", "url(#clip)");
+
 
         // Make a custom color scale
         var customColors = [
@@ -138,14 +164,6 @@
             // Whenever the searchBox is typed in, update the variable searchText
             var searchText = this.value.trim().toLowerCase();
             console.log("Search Text: ", searchText);
-            
-            // Get the matching countries
-            var matchingCountries = tempdata.filter(function (d) {
-                return searchText && d.Country.toLowerCase().startsWith(searchText);
-            });
-
-            // Log the matching countries to the console
-            console.log("Matching Countries:", matchingCountries);
 
             // Iterate over each dot and change opacity based on if the string matches name
             dots.each(function (d) {
@@ -155,7 +173,8 @@
                 // Use an if block to set opacity
                 if (searchText) {
                     d3.select(this)
-                        .style("opacity", isMatching ? 1 : 0.07);
+                        .style("opacity", isMatching ? 1 : 0.07)
+                        .raise();
                 } else {
                     d3.select(this).style("opacity", 1);
                 }
@@ -182,13 +201,19 @@
                 // If user clicks the same region twice, re-toggle all
                 if (selectedRegion === d) {
                         selectedRegion = null;
-                        legend.selectAll('text').style('fill', 'black');
+                        legend.selectAll('text')
+                            .transition()
+                            .duration(transDuration)
+                            .style('fill', 'black');
                 } else {
                         selectedRegion = d;
                         // Toggle class for all legend items based on selectedRegion
-                        legend.selectAll('text').style('fill', function(region) {
-                            return region === selectedRegion ? 'black' : 'grey';
-                        })
+                        legend.selectAll('text')
+                            .transition()
+                            .duration(transDuration)
+                            .style('fill', function(region) {
+                                 return region === selectedRegion ? 'black' : 'grey';
+                            })
                 }
 
                 // Update dots
@@ -216,9 +241,12 @@
             svg.selectAll('circle') // Re-sort existing dots
                .sort(sortFunction) 
                .transition()
-               .duration(500)
+               .duration(transDuration)
                .attr("cx", function(d) { return x(d.median_age); })
                .attr("cy", function(d) { return y(d.leader_age); })
+               .style("opacity", function(d) { 
+                    return selectedRegion === null || d.region === selectedRegion ? 1 : 0; 
+                }).end()
                .style("display", function(d) { 
                 
                 if (selectedRegion === null) {
@@ -238,7 +266,7 @@
 
 <main>
     <body>
-        <h1>Are country leaders older than their population?</h1>
+        <h1>Are all country leaders older than their median population?</h1>
         <h5>Data from 2018</h5>
         <div class='row'>
             <div class='left'>
@@ -252,13 +280,15 @@
                     solid gray;"/>
             </div>
             <div class='right'>
-                <label for="searchBox">Search Dot by Name: </label>
-                <input type="text" id="searchBox" placeholder="Enter name">
+                <label for="searchBox">Search Country by Name:    </label>
+                <input type="text" id="searchBox" placeholder="Where?">
                 <br>
                 <br>
                 <div id="legend"></div>
+                <p class='clarification'>*All dots above the - - - - - - line has a leader older than the median population</p>
             </div>
         </div>
+
         <p>Click on the legend to filter by region and hover the data points to see details!</p>
         
     </body>
@@ -269,11 +299,18 @@
     body {
         font-size: 16px;
         color: black;
-        font-family:'Franklin Gothic Medium';
-
+        font-family: 'Franklin Gothic Medium';
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
     }
+
     .row {
-        display:flex;
+        display: flex;
+        justify-content: center;
     }
 
     .column {
@@ -283,9 +320,20 @@
     .left {
         flex: 10%;
     }
+
     .right {
         flex: 90%;
     }
+
+    .clarification {
+        font-size: 12px;
+        font-family: 'Franklin Gothic';
+    }
+
+    #my_dataviz {
+        width: 100%;
+    }
+
     
 
 </style>
