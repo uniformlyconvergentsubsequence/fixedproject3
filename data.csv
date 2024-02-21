@@ -1,0 +1,206 @@
+Country,Age,Gender
+ Denmark,84.0,Male
+ Ecuador,69.0,Male
+Abkhazia (Republic of Abkhazia),61.0,Male
+Afghanistan,75.0,Male
+Albania,57.0,Male
+Algeria,79.0,Male
+Andorra,75.0,Male
+Angola,70.0,Male
+Antigua and Barbuda,80.0,Male
+Argentina,65.0,Male
+Armenia,65.0,Male
+Australia,71.0,Male
+Austria,52.0,Male
+Azerbaijan,63.0,Male
+Bahamas,96.0,Male
+Bahrain,74.0,Male
+Bangladesh,75.0,Male
+Barbados,75.0,Female
+Belarus,70.0,Male
+Belgium,64.0,Male
+Belize,73.0,Male
+Benin,66.0,Male
+Bhutan,44.0,Male
+Bolivia,61.0,Male
+Bosnia and Herzegovina,65.0,Male
+Botswana,63.0,Male
+Brazil,69.0,Male
+Brunei,78.0,Male
+Bulgaria,61.0,Male
+Burkina Faso,43.0,Male
+Burundi,56.0,Male
+Cambodia,71.0,Male
+Cameroon,91.0,Male
+Canada,53.0,Male
+Cape Verde,64.0,Male
+Central African Republic,67.0,Male
+Chad,40.0,Male
+Chile,38.0,Male
+China,71.0,Male
+Colombia,64.0,Male
+Comoros,65.0,Male
+Congo,61.0,Male
+Costa Rica,63.0,Male
+Croatia,58.0,Male
+Cuba,64.0,Male
+Curacao,53.0,Male
+Cyprus,78.0,Male
+Czech Republic,80.0,Male
+Côte d’Ivoire (Ivory Coast),82.0,Male
+Djibouti,77.0,Male
+Dominica,76.0,Male
+Dominican Republic,57.0,Male
+Egypt,70.0,Male
+El Salvador,43.0,Male
+Equatorial Guinea,82.0,Male
+Eritrea,78.0,Male
+Estonia,51.0,Female
+Ethiopia,48.0,Male
+Faroe Islands,60.0,Male
+Fiji,70.0,Male
+Finland,76.0,Female
+France,47.0,Male
+French Polynesia,75.0,Male
+Gabon,89.0,Male
+Gambia,59.0,Male
+Georgia,72.0,Female
+Germany,70.0,Female
+Ghana,80.0,Male
+Greece,50.0,Male
+Grenada,79.0,Male
+Guatemala,68.0,Male
+Guinea,44.0,Male
+Guinea-Bissau,52.0,Male
+Guyana,44.0,Male
+Haiti,75.0,Male
+Honduras,65.0,Female
+Hungary,47.0,Female
+Iceland,56.0,Male
+India,74.0,Male
+Indonesia,63.0,Male
+Iran,85.0,Male
+Iraq,64.0,Male
+Ireland,83.0,Male
+Israel,52.0,Male
+Italy,47.0,Female
+Jamaica,79.0,Male
+Japan,67.0,Male
+Jordan,62.0,Male
+Kazakhstan,71.0,Male
+Kenya,58.0,Male
+Korea (North),41.0,Male
+Korea (South),64.0,Male
+Kosovo,42.0,Female
+Kuwait,87.0,Male
+Kyrgyzstan,56.0,Male
+Laos,79.0,Male
+Latvia,69.0,Male
+Lebanon,76.0,Male
+Lesotho,61.0,Male
+Liberia,58.0,Male
+Libya,82.0,Male
+Liechtenstein,79.0,Male
+Lithuania,68.0,Male
+Luxembourg,61.0,Male
+Macedonia,64.0,Male
+Madagascar,50.0,Male
+Malawi,69.0,Male
+Malaysia,99.0,Male
+Maldives,60.0,Male
+Mali,41.0,Male
+Malta,66.0,Female
+Marshall Islands,73.0,Male
+Mauritania,68.0,Male
+Mauritus,65.0,Male
+Mexico,71.0,Male
+Micronesia,60.0,Male
+Moldova,52.0,Female
+Monaco,66.0,Male
+Mongolia,56.0,Male
+Montenegro,62.0,Male
+Morocco,63.0,Male
+Mozambique,65.0,Male
+Myanmar (Burma),68.0,Male
+Namibia,83.0,Male
+Nauru,52.0,Male
+Nepal,80.0,Male
+Nepal,80.0,Male
+Netherlands,57.0,Male
+New Zealand,44.0,Female
+Nicaragua,79.0,Male
+Niger,72.0,Male
+Nigeria,82.0,Male
+Northern Cyprus,77.0,Male
+Norway,63.0,Male
+Oman,69.0,Male
+Pakistan,75.0,Male
+Palau,56.0,Male
+Palestine,89.0,Male
+Panama,71.0,Male
+Papua New Guinea,60.0,Male
+Paraguay,53.0,Male
+Peru,55.0,Male
+Philippines,67.0,Male
+Poland,52.0,Male
+Portugal,76.0,Male
+Pridnestrovie,83.0,Male
+Qatar,44.0,Male
+Romania,65.0,Male
+Russia,72.0,Male
+Rwanda,67.0,Male
+Saint Kitts and Nevis,48.0,Male
+Saint Lucia,70.0,Female
+Saint Vincent and the Grenadines,78.0,Male
+Samoa,67.0,Male
+San Marino,52.0,Male
+Saudi Arabia,100.0,Male
+Senegal,63.0,Male
+Serbia,54.0,Male
+Seychelles,63.0,Male
+Sierra Leone,60.0,Male
+Singapore,90.0,Male
+Sint Maarten,56.0,Female
+Slovakia,51.0,Female
+Slovenia,72.0,Male
+Solomon Islands,69.0,Male
+Somalia,69.0,Male
+Somaliland,72.0,Male
+South Africa,72.0,Male
+South Ossetia,54.0,Male
+Spain,52.0,Male
+Sri Lanka,75.0,Male
+Sudan,73.0,Male
+Suriname,79.0,Male
+Swaziland,56.0,Male
+Sweden,57.0,Female
+Switzerland,63.0,Male
+Syria,59.0,Male
+São Tomé and Príncipe,65.0,Male
+Taiwan (Republic of China),68.0,Female
+Tajikistan,72.0,Male
+Tanzania,64.0,Female
+Thailand,86.0,Male
+Timor-Leste (East Timor),75.0,Male
+Togo,58.0,Male
+Tonga,80.0,Male
+Trinidad and Tobago,66.0,Female
+Tunisia,66.0,Male
+Turkey,70.0,Male
+Turkmenistan,43.0,Male
+Tuvalu,68.0,Male
+Uganda,80.0,Male
+Ukraine,46.0,Male
+United Arab Emirates,63.0,Male
+United Kingdom,44.0,Male
+United States,82.0,Male
+Uruguay,51.0,Male
+Uzbekistan,86.0,Male
+Vanuatu,70.0,Male
+Vatican City,88.0,Male
+Venezuela,62.0,Male
+Vietnam,80.0,Male
+Western Sahara,76.0,Male
+Yemen,79.0,Male
+Zambia,62.0,Male
+Zimbabwe,82.0,Male

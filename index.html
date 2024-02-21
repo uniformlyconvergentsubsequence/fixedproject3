@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	
+		<link href="./_app/immutable/assets/2.Tj4gugYx.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.GFL6U9ww.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.TKA4JsQ1.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.zMJaRgub.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.k_er6esu.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.bdaJyo3N.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.8pPwduGl.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.2u4Issfb.js">
+</head>
+<body>
+	  <main data-svelte-h="svelte-1kv8q53"><body class="svelte-1t883zi"><h1>Are all country leaders older than their median population?</h1> <h5>Data from 2018</h5> <div class="row svelte-1t883zi"><div class="left svelte-1t883zi"><div id="my_dataviz" class="svelte-1t883zi"></div> <div id="tooltip" style="display: none; position: absolute; background-color: white; padding: 10px; border: 1px solid gray;"></div></div> <div class="right svelte-1t883zi"><label for="searchBox">Search Country by Name:</label> <input type="text" id="searchBox" placeholder="Where?"> <br> <br> <div id="legend"></div> <p class="clarification svelte-1t883zi">*All dots above the - - - - - - line has a leader older than the median population</p></div></div> <p>Click on the legend to filter by region and hover the data points to see details!</p></body> </main> 
+			
+			<script>
+				{
+					__sveltekit_1rgg1o3 = {
+						base: new URL(".", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.GFL6U9ww.js"),
+						import("./_app/immutable/entry/app.k_er6esu.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+	
+</body>
+Failed to load url ./components/App.svelte (resolved id: ./components/App.svelte) in 
